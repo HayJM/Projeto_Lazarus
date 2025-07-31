@@ -1,0 +1,82 @@
+# Arquivos compilados
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.ppu
+*.compiled
+*.or
+*.a
+
+# Diretórios de build e backup
+lib/
+backup/
+units/
+__history/
+__recovery/
+
+# Arquivos temporários do Lazarus/Delphi
+*.lps
+*.dsk
+*.tmp
+*.bak
+*~
+*.~*
+*.identcache
+*.tgs
+*.tgw
+*.dcu
+*.ddp
+*.dcp
+*.bpi
+*.#*
+*.rsp
+
+# Arquivos de sessão e configuração local
+*.session
+*.local
+*.cfg
+*.dof
+
+# Arquivos de log
+*.log
+
+# Arquivos de dados temporários
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Configurações específicas do usuário/IDE
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Arquivos de commit temporários do Git
+COMMIT_EDITMSG
+
+# Pacotes de instalação (podem ser grandes)
+*.deb
+*.rpm
+*.msi
+*.pkg
+
+# Arquivos de recursos compilados (quando não necessários)
+*.res
+*.rc
+
+# Diretórios específicos do projeto
+Binary/
+gds32/
+
+# Arquivos de workspace específicos do VS Code
+*.code-workspace
+
+# Arquivos ZIP temporários
+*.zip

@@ -1,0 +1,123 @@
+object frmproduto: Tfrmproduto
+  Left = 241
+  Height = 459
+  Top = 31
+  Width = 879
+  Caption = 'Cadastro Produto'
+  ClientHeight = 459
+  ClientWidth = 879
+  Position = poDesktopCenter
+  object edtProduto: TEdit
+    Left = 16
+    Height = 31
+    Top = 40
+    Width = 245
+    TabOrder = 0
+  end
+  object lblNomeProd: TLabel
+    Left = 16
+    Height = 19
+    Top = 17
+    Width = 95
+    Caption = 'Nome Produto:'
+  end
+  object lblMarca: TLabel
+    Left = 16
+    Height = 19
+    Top = 80
+    Width = 113
+    Caption = 'Marca do produto:'
+  end
+  object edtMarca: TEdit
+    Left = 16
+    Height = 31
+    Top = 104
+    Width = 245
+    TabOrder = 1
+  end
+  object edtcodigo: TEdit
+    Left = 334
+    Height = 31
+    Top = 40
+    Width = 245
+    TabOrder = 2
+  end
+  object lblCodigoProd: TLabel
+    Left = 334
+    Height = 19
+    Top = 17
+    Width = 119
+    Caption = 'Código do Produto:'
+  end
+  object memDescricao: TMemo
+    Left = 334
+    Height = 110
+    Top = 104
+    Width = 524
+    Lines.Strings = (
+      'memDescricao'
+    )
+    TabOrder = 3
+  end
+  object lbldDescricao: TLabel
+    Left = 334
+    Height = 19
+    Top = 80
+    Width = 136
+    Caption = 'Descrição do Produto:'
+  end
+  object btnCadastrar: TButton
+    Left = 260
+    Height = 25
+    Top = 256
+    Width = 249
+    Caption = 'Cadastrar'
+    TabOrder = 4
+    OnClick = btnCadastrarClick
+  end
+  object edtVCompra: TEdit
+    Left = 16
+    Height = 31
+    Top = 167
+    Width = 94
+    TabOrder = 5
+  end
+  object edtAjuste: TEdit
+    Left = 176
+    Height = 31
+    Top = 167
+    Width = 107
+    TabOrder = 6
+    OnExit = edtAjusteExit
+  end
+  object lblValorCompra: TLabel
+    Left = 16
+    Height = 19
+    Top = 145
+    Width = 102
+    Caption = 'Valor de Compra'
+  end
+  object lblAjuste: TLabel
+    Left = 176
+    Height = 19
+    Top = 145
+    Width = 76
+    Caption = '% de Ajuste:'
+  end
+  object lblVvenda: TLabel
+    Left = 82
+    Height = 19
+    Top = 213
+    Width = 103
+    Caption = 'Valor de Venda:  '
+  end
+  object srlDadosProduto: TScrollBox
+    Left = 16
+    Height = 150
+    Top = 296
+    Width = 840
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    TabOrder = 7
+  end
+end

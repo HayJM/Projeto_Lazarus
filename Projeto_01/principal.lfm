@@ -1,0 +1,154 @@
+object frmprincipal: Tfrmprincipal
+  Left = 966
+  Height = 435
+  Top = 31
+  Width = 805
+  Caption = 'Pricipal'
+  ClientHeight = 435
+  ClientWidth = 805
+  Color = 12775518
+  Menu = MainMenu1
+  OnShow = FormShow
+  Position = poDesktopCenter
+  object edtnome: TEdit
+    Left = 30
+    Height = 31
+    Top = 40
+    Width = 304
+    TabOrder = 0
+  end
+  object lblnome: TLabel
+    Left = 31
+    Height = 19
+    Top = 19
+    Width = 42
+    Caption = 'Nome:'
+  end
+  object lbltelefone: TLabel
+    Left = 31
+    Height = 19
+    Top = 144
+    Width = 58
+    Caption = 'Telefone:'
+  end
+  object lblcep: TLabel
+    Left = 399
+    Height = 19
+    Top = 144
+    Width = 27
+    Caption = 'CEP:'
+  end
+  object qrggenero: TRadioGroup
+    Left = 31
+    Height = 64
+    Top = 80
+    Width = 302
+    Anchors = [akTop, akLeft, akBottom]
+    AutoFill = True
+    Caption = 'Genero:'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 44
+    ClientWidth = 300
+    Columns = 3
+    Items.Strings = (
+      'Masculino'
+      'Feminino'
+      'Perdido'
+    )
+    ParentBackground = False
+    TabOrder = 1
+  end
+  object edtfone: TMaskEdit
+    Left = 31
+    Height = 31
+    Hint = 'Digite apenas numeros'
+    Top = 168
+    Width = 302
+    MaxLength = 16
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    OnExit = edtfoneExit
+    EditMask = '!\(99\) 0 0000\-0000'
+    Text = '(  )       -    '
+    SpaceChar = '_'
+  end
+  object lblcpf: TLabel
+    Left = 392
+    Height = 19
+    Top = 16
+    Width = 27
+    Caption = 'CPF:'
+    Layout = tlCenter
+  end
+  object edtcpf: TMaskEdit
+    Left = 392
+    Height = 31
+    Hint = 'Digite apenas numeros'
+    Top = 40
+    Width = 302
+    MaxLength = 14
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    OnChange = edtcpfChange
+    OnExit = edtfoneExit
+    EditMask = '!000.000.000\-00;1;_'
+    Text = '   .   .   -  '
+    SpaceChar = '_'
+  end
+  object edtcep: TMaskEdit
+    Left = 400
+    Height = 31
+    Top = 168
+    Width = 295
+    MaxLength = 10
+    TabOrder = 4
+    EditMask = '00.000\-000;1;_'
+    Text = '  .   -   '
+    SpaceChar = '_'
+  end
+  object btncadastrar: TButton
+    Left = 328
+    Height = 25
+    Top = 224
+    Width = 75
+    Caption = 'Cadastrar'
+    TabOrder = 5
+    OnClick = btncadastrarClick
+  end
+  object srldados: TScrollBox
+    Left = 24
+    Height = 127
+    Top = 272
+    Width = 732
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    Color = clCream
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 6
+  end
+  object MainMenu1: TMainMenu
+    Left = 8
+    Top = 8
+    object mniProduto: TMenuItem
+      Caption = 'Produtos'
+      OnClick = mniProdutoClick
+    end
+    object mniPsequisa: TMenuItem
+      Caption = 'Pesquisa'
+      OnClick = mniPsequisaClick
+    end
+    object mniVenda: TMenuItem
+      Caption = 'Venda'
+      OnClick = mniVendaClick
+    end
+  end
+end

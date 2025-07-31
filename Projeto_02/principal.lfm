@@ -1,0 +1,36 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 241
+  Height = 465
+  Top = 250
+  Width = 859
+  Caption = 'Tela Principal'
+  Menu = MainMenu1
+  Position = poDesktopCenter
+  object MainMenu1: TMainMenu
+    object menCadastro: TMenuItem
+      Caption = 'Cadastro'
+      object menCliente: TMenuItem
+        Caption = 'Cliente'
+        OnClick = menClienteClick
+      end
+      object menProduto: TMenuItem
+        Caption = 'Produto'
+      end
+    end
+    object menPesquisa: TMenuItem
+      Caption = 'Pesquisa'
+      object menPsCliente: TMenuItem
+        Caption = 'Cliente'
+      end
+      object menPsProduto: TMenuItem
+        Caption = 'Produto'
+      end
+      object menNotaFis: TMenuItem
+        Caption = 'Nota Fiscal'
+      end
+    end
+    object menVenda: TMenuItem
+      Caption = 'Venda'
+    end
+  end
+end

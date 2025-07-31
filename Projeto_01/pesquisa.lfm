@@ -1,0 +1,50 @@
+object frmpesquisa: Tfrmpesquisa
+  Left = 966
+  Height = 318
+  Top = 31
+  Width = 583
+  Caption = 'Pesquisa'
+  ClientHeight = 318
+  ClientWidth = 583
+  Position = poDesktopCenter
+  object lblcpf: TLabel
+    Left = 24
+    Height = 19
+    Top = 40
+    Width = 27
+    Caption = 'CPF:'
+    Layout = tlCenter
+  end
+  object edtcpf: TMaskEdit
+    Left = 24
+    Height = 31
+    Hint = 'Digite apenas numeros'
+    Top = 64
+    Width = 302
+    MaxLength = 14
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    EditMask = '!000.000.000\-00;1;_'
+    Text = '   .   .   -  '
+    SpaceChar = '_'
+  end
+  object btnpesquisa: TButton
+    Left = 400
+    Height = 35
+    Top = 64
+    Width = 150
+    Caption = 'Pesquisa'
+    TabOrder = 1
+    OnClick = btnpesquisaClick
+  end
+  object srlpesquisa: TScrollBox
+    Left = 24
+    Height = 155
+    Top = 141
+    Width = 526
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    TabOrder = 2
+  end
+end

@@ -1,0 +1,118 @@
+object frmVendas: TfrmVendas
+  Left = 297
+  Height = 578
+  Top = 226
+  Width = 1104
+  Caption = 'Vendas'
+  ClientHeight = 578
+  ClientWidth = 1104
+  Position = poDesktopCenter
+  object btncpf: TButton
+    Left = 307
+    Height = 31
+    Top = 32
+    Width = 141
+    Caption = 'Pesquisa'
+    TabOrder = 0
+    OnClick = btncpfClick
+  end
+  object edtCodigoProd: TEdit
+    Left = 22
+    Height = 31
+    Hint = 'Entre com codigo do produto para Busca!'
+    Top = 136
+    Width = 120
+    TabOrder = 1
+  end
+  object btnBusca: TButton
+    Left = 272
+    Height = 30
+    Top = 136
+    Width = 77
+    Caption = 'Busca'
+    TabOrder = 2
+    OnClick = btnBuscaClick
+  end
+  object lblCPF: TLabel
+    Left = 22
+    Height = 19
+    Hint = 'Digite o CPF do Cliente para busca!'
+    Top = 8
+    Width = 23
+    Caption = 'CPF'
+  end
+  object lblCodProd: TLabel
+    Left = 22
+    Height = 19
+    Top = 112
+    Width = 119
+    AutoSize = False
+    Caption = 'Codigo do produto:'
+    Font.Height = 13
+    OptimalFill = True
+    ParentFont = False
+  end
+  object edtcpf: TMaskEdit
+    Left = 22
+    Height = 31
+    Hint = 'Digite apenas numeros'
+    Top = 32
+    Width = 120
+    MaxLength = 14
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    EditMask = '!000.000.000\-00;1;_'
+    Text = '   .   .   -  '
+    SpaceChar = '_'
+  end
+  object srlProduto: TScrollBox
+    Left = 22
+    Height = 126
+    Top = 176
+    Width = 426
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    TabOrder = 4
+  end
+  object btnConcluir: TButton
+    Left = 576
+    Height = 48
+    Top = 312
+    Width = 206
+    Caption = 'Concluir Venda'
+    TabOrder = 5
+  end
+  object srlProdutosCompr: TScrollBox
+    Left = 472
+    Height = 298
+    Top = 8
+    Width = 435
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    TabOrder = 6
+  end
+  object lblNomeCliente: TLabel
+    Left = 24
+    Height = 19
+    Top = 72
+    Width = 105
+    Caption = 'Nome do cliente.'
+  end
+  object btnAdd: TButton
+    Left = 371
+    Height = 30
+    Top = 136
+    Width = 77
+    Caption = 'Add'
+    TabOrder = 7
+    OnClick = btnAddClick
+  end
+  object lblValorDaVenda: TLabel
+    Left = 23
+    Height = 19
+    Top = 318
+    Width = 130
+    Caption = 'Valor total da Venda: '
+  end
+end

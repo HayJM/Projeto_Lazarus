@@ -1,0 +1,34 @@
+# Arquivos compilados
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.ppu
+*.compiled
+
+# Diretórios de build
+lib/
+backup/
+
+# Arquivos temporários do Lazarus
+*.lps
+*.tmp
+*.bak
+*~
+
+# Arquivos de sessão
+*.session
+
+# Arquivos de log
+*.log
+
+# Configurações específicas do usuário
+*.local
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de commit temporários do Git
+COMMIT_EDITMSG

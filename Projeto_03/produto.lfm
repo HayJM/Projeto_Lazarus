@@ -1,0 +1,45 @@
+object frmProduto: TfrmProduto
+  Left = 966
+  Height = 525
+  Top = 250
+  Width = 997
+  Caption = 'Produtos'
+  ClientHeight = 525
+  ClientWidth = 997
+  OnCreate = FormCreate
+  object DBGrid1: TDBGrid
+    Left = 576
+    Height = 144
+    Top = 10
+    Width = 419
+    Color = clWindow
+    Columns = <>
+    DataSource = frmPrincipal.DataSource1
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 19
+    Height = 19
+    Top = 10
+    Width = 41
+    Caption = 'codigo'
+  end
+  object bar: TStatusBar
+    Left = 0
+    Height = 21
+    Top = 504
+    Width = 997
+    Panels = <    
+      item
+        Width = 100
+      end    
+      item
+        Width = 300
+      end    
+      item
+        Alignment = taRightJustify
+        Width = 100
+      end>
+    SimplePanel = False
+  end
+end
