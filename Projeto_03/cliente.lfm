@@ -1,0 +1,359 @@
+object frmcliente: Tfrmcliente
+  Left = 966
+  Height = 555
+  Top = 250
+  Width = 1023
+  Caption = 'Cliente'
+  ClientHeight = 555
+  ClientWidth = 1023
+  Position = poDesktopCenter
+  object DBEdit1: TDBEdit
+    Left = 8
+    Height = 31
+    Top = 24
+    Width = 200
+    DataField = 'CPF'
+    DataSource = DataSource1
+    MaxLength = 11
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Height = 267
+    Top = 288
+    Width = 992
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 19
+    Top = 8
+    Width = 30
+    Caption = 'CPF: '
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 360
+    Height = 25
+    Top = 240
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DataSource1
+    Options = []
+    TabOrder = 2
+  end
+  object DBEdit2: TDBEdit
+    Left = 472
+    Height = 31
+    Top = 32
+    Width = 208
+    DataField = 'TELEFONE'
+    DataSource = DataSource1
+    MaxLength = 15
+    TabOrder = 3
+  end
+  object nome: TLabel
+    Left = 472
+    Height = 19
+    Top = 8
+    Width = 58
+    Caption = 'Telefone:'
+  end
+  object DBEdit3: TDBEdit
+    Left = 8
+    Height = 31
+    Top = 104
+    Width = 448
+    DataField = 'NOME'
+    DataSource = DataSource1
+    MaxLength = 100
+    TabOrder = 4
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 19
+    Top = 72
+    Width = 42
+    Caption = 'Nome:'
+  end
+  object DBEdit4: TDBEdit
+    Left = 8
+    Height = 31
+    Top = 176
+    Width = 136
+    DataField = 'CEP'
+    DataSource = DataSource1
+    MaxLength = 10
+    TabOrder = 5
+  end
+  object Label4: TLabel
+    Left = 8
+    Height = 19
+    Top = 144
+    Width = 26
+    Caption = 'CEP '
+  end
+  object DBEdit5: TDBEdit
+    Left = 160
+    Height = 31
+    Top = 176
+    Width = 408
+    DataField = 'BAIRRO'
+    DataSource = DataSource1
+    MaxLength = 50
+    TabOrder = 6
+  end
+  object Label5: TLabel
+    Left = 160
+    Height = 19
+    Top = 144
+    Width = 38
+    Caption = 'Bairro'
+  end
+  object DBEdit6: TDBEdit
+    Left = 616
+    Height = 31
+    Top = 176
+    Width = 80
+    DataField = 'NUMERO_CASA'
+    DataSource = DataSource1
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 7
+  end
+  object Label6: TLabel
+    Left = 616
+    Height = 19
+    Top = 144
+    Width = 55
+    Caption = 'Numero:'
+  end
+  object DBEdit7: TDBEdit
+    Left = 728
+    Height = 31
+    Top = 176
+    Width = 80
+    DataField = 'COMPLEMENTO'
+    DataSource = DataSource1
+    MaxLength = 100
+    TabOrder = 8
+  end
+  object Label7: TLabel
+    Left = 728
+    Height = 19
+    Top = 144
+    Width = 90
+    Caption = 'complemento:'
+  end
+  object DBRadioGroup1: TDBRadioGroup
+    Left = 736
+    Height = 105
+    Top = 8
+    Width = 128
+    AutoFill = True
+    Caption = 'Genero'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    DataField = 'GENERO'
+    DataSource = DataSource1
+    Items.Strings = (
+      'M'
+      'F'
+      'O'
+    )
+    OnClick = DBRadioGroup1Click
+    TabOrder = 9
+    Values.Strings = (
+      'M'
+      'F'
+      'O'
+    )
+  end
+  object DBRadioGroup2: TDBRadioGroup
+    Left = 880
+    Height = 160
+    Top = 8
+    Width = 128
+    AutoFill = True
+    Caption = 'Plano'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    DataField = 'MEMBERSHIP'
+    DataSource = DataSource1
+    Items.Strings = (
+      'Free'
+      'Premio'
+      'Platina'
+      'Ouro'
+      'Sócio'
+    )
+    TabOrder = 10
+    Values.Strings = (
+      'Free'
+      'Premio'
+      'Platina'
+      'Ouro'
+      'Sócio'
+    )
+  end
+  object DBEdit8: TDBEdit
+    Left = 472
+    Height = 31
+    Top = 104
+    Width = 248
+    DataField = 'EMAIL'
+    DataSource = DataSource1
+    MaxLength = 100
+    TabOrder = 11
+  end
+  object Label8: TLabel
+    Left = 472
+    Height = 19
+    Top = 72
+    Width = 40
+    Caption = 'E-mail:'
+  end
+  object ZTable1: TZTable
+    Connection = frmPrincipal.ZConnection1
+    Active = True
+    TableName = 'CLIENTE'
+    Left = 848
+    Top = 328
+    object ZTable1CPF: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'CPF'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      EditMask = '999.999.999-99'
+      Size = 11
+    end
+    object ZTable1NOME: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object ZTable1GENERO: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'GENERO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object ZTable1TELEFONE: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'TELEFONE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '(99) 9 9999-9999'
+      Size = 15
+    end
+    object ZTable1CEP: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'CEP'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditMask = '99.999-999'
+      Size = 10
+    end
+    object ZTable1RUA: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'RUA'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object ZTable1BAIRRO: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'BAIRRO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object ZTable1NUMERO_CASA: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'NUMERO_CASA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZTable1COMPLEMENTO: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'COMPLEMENTO'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object ZTable1MEMBERSHIP: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'MEMBERSHIP'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZTable1EMAIL: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'EMAIL'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ZTable1
+    Left = 920
+    Top = 328
+  end
+end

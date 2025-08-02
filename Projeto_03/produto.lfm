@@ -7,22 +7,190 @@ object frmProduto: TfrmProduto
   ClientHeight = 525
   ClientWidth = 997
   OnCreate = FormCreate
-  object DBGrid1: TDBGrid
-    Left = 576
-    Height = 144
-    Top = 10
-    Width = 419
-    Color = clWindow
-    Columns = <>
-    DataSource = frmPrincipal.DataSource1
+  OnShow = FormShow
+  object DBEdit1: TDBEdit
+    Left = 8
+    Height = 31
+    Top = 40
+    Width = 100
+    DataField = 'ID'
+    DataSource = DataSource1
+    Alignment = taRightJustify
+    MaxLength = 0
     TabOrder = 0
   end
+  object DBEdit2: TDBEdit
+    Left = 120
+    Height = 31
+    Top = 40
+    Width = 200
+    DataField = 'NOME'
+    DataSource = DataSource1
+    MaxLength = 100
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 336
+    Height = 31
+    Top = 40
+    Width = 200
+    DataField = 'MARCA'
+    DataSource = DataSource1
+    MaxLength = 100
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit
+    Left = 248
+    Height = 31
+    Top = 104
+    Width = 100
+    DataField = 'PRECOCOMPRA'
+    DataSource = DataSource1
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object DBEdit5: TDBEdit
+    Left = 248
+    Height = 31
+    Top = 168
+    Width = 100
+    DataField = 'PRECOVENDA'
+    DataSource = DataSource1
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object DBEdit6: TDBEdit
+    Left = 8
+    Height = 31
+    Top = 104
+    Width = 200
+    DataField = 'FORNECEDOR'
+    DataSource = DataSource1
+    MaxLength = 100
+    TabOrder = 5
+  end
+  object DBEdit7: TDBEdit
+    Left = 424
+    Height = 31
+    Top = 104
+    Width = 100
+    DataField = 'QUANTIDADE'
+    DataSource = DataSource1
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 6
+  end
+  object DBEdit8: TDBEdit
+    Left = 8
+    Height = 31
+    Top = 168
+    Width = 120
+    DataField = 'DATAAQUISICAO'
+    DataSource = DataSource1
+    MaxLength = 0
+    TabOrder = 7
+  end
+  object DBMemo1: TDBMemo
+    Left = 552
+    Height = 89
+    Top = 46
+    Width = 388
+    DataField = 'DESCRIOCAO'
+    DataSource = DataSource1
+    TabOrder = 8
+  end
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 287
+    Top = 224
+    Width = 976
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 9
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 584
+    Height = 25
+    Top = 168
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DataSource1
+    Options = []
+    TabOrder = 10
+  end
   object Label1: TLabel
-    Left = 19
+    Left = 8
     Height = 19
-    Top = 10
+    Top = 24
+    Width = 19
+    Caption = 'ID:'
+  end
+  object Label2: TLabel
+    Left = 120
+    Height = 19
+    Top = 24
+    Width = 42
+    Caption = 'Nome:'
+  end
+  object Label3: TLabel
+    Left = 336
+    Height = 19
+    Top = 24
     Width = 41
-    Caption = 'codigo'
+    Caption = 'Marca:'
+  end
+  object Label4: TLabel
+    Left = 248
+    Height = 19
+    Top = 80
+    Width = 90
+    Caption = 'Preço Compra:'
+  end
+  object Label5: TLabel
+    Left = 248
+    Height = 19
+    Top = 144
+    Width = 81
+    Caption = 'Preço Venda:'
+  end
+  object Label6: TLabel
+    Left = 8
+    Height = 19
+    Top = 88
+    Width = 77
+    Caption = 'Fornecedor:'
+  end
+  object Label7: TLabel
+    Left = 424
+    Height = 19
+    Top = 81
+    Width = 76
+    Caption = 'Quantidade:'
+  end
+  object Label8: TLabel
+    Left = 8
+    Height = 19
+    Top = 152
+    Width = 94
+    Caption = 'Data Aquisição:'
+  end
+  object Label9: TLabel
+    Left = 560
+    Height = 19
+    Top = 22
+    Width = 64
+    Caption = 'Descrição:'
   end
   object bar: TStatusBar
     Left = 0
@@ -41,5 +209,114 @@ object frmProduto: TfrmProduto
         Width = 100
       end>
     SimplePanel = False
+  end
+  object ZTable1: TZTable
+    Connection = frmPrincipal.ZConnection1
+    Active = True
+    TableName = 'PRODUTO'
+    Left = 872
+    Top = 224
+    object ZTable1ID: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object ZTable1NOME: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object ZTable1MARCA: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'MARCA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object ZTable1DESCRIOCAO: TZRawCLobField
+      FieldKind = fkData
+      FieldName = 'DESCRIOCAO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object ZTable1FORNECEDOR: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'FORNECEDOR'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object ZTable1PRECOCOMPRA: TZBCDField
+      FieldKind = fkData
+      FieldName = 'PRECOCOMPRA'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 10
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+    object ZTable1PRECOVENDA: TZBCDField
+      FieldKind = fkData
+      FieldName = 'PRECOVENDA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = 10
+      Currency = False
+      MaxValue = 0
+      MinValue = 0
+      Size = 2
+    end
+    object ZTable1QUANTIDADE: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'QUANTIDADE'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZTable1DATAAQUISICAO: TZDateField
+      FieldKind = fkData
+      FieldName = 'DATAAQUISICAO'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ZTable1
+    OnDataChange = DataSource1DataChange
+    Left = 928
+    Top = 224
   end
 end

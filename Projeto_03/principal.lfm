@@ -10,10 +10,10 @@ object frmPrincipal: TfrmPrincipal
   Menu = MainMenu1
   Position = poDesktopCenter
   object DBGrid1: TDBGrid
-    Left = 608
+    Left = 56
     Height = 129
-    Top = 200
-    Width = 235
+    Top = 0
+    Width = 768
     Color = clWindow
     Columns = <>
     DataSource = DataSource1
@@ -39,16 +39,30 @@ object frmPrincipal: TfrmPrincipal
   end
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    AfterConnect = ZConnection1AfterConnect
     DisableSavepoints = False
-    Port = 0
-    Database = '/home/haynner/HD/Documentos/Eng.Computação/Optativas/Projetos/Projeto_03/data/BancoDeDados.fdb'
+    HostName = 'localhost'
+    Port = 3050
+    Database = '/var/lib/firebird/data/BataBase.fdb'
+    User = 'SYSDBA'
+    Password = 'masterkey'
     Protocol = 'firebird'
+    LibraryLocation = '/usr/lib/x86_64-linux-gnu/libfbclient.so.3.0.11'
     Left = 832
   end
   object ZQuery1: TZQuery
     Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT CPF, NOME, GENERO, TELEFONE, MEMBERSHIP'
+      'FROM CLIENTE'
+      'ORDER BY NOME'
+    )
     Params = <>
-    DataSource = DataSource1
     Left = 832
     Top = 56
   end
@@ -58,12 +72,11 @@ object frmPrincipal: TfrmPrincipal
     Top = 120
   end
   object MainMenu1: TMainMenu
-    Left = 46
-    Top = 21
     object MenuItem1: TMenuItem
       Caption = 'Cadastro'
       object MenuItem2: TMenuItem
         Caption = 'Cliente'
+        OnClick = MenuItem2Click
       end
       object MenuItem3: TMenuItem
         Caption = 'Produto'
@@ -75,5 +88,20 @@ object frmPrincipal: TfrmPrincipal
     OnTimer = Timer1Timer
     Left = 8
     Top = 88
+  end
+  object ZConnection2: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    DisableSavepoints = False
+    Port = 0
+    Database = '/home/haynner/HD/Documentos/Eng.Computação/Optativas/BancoDeDados_script/FireBird/data/database.fdb'
+    User = 'sysdba'
+    Password = 'masterkey'
+    Protocol = 'firebird'
+    LibraryLocation = '/usr/lib/x86_64-linux-gnu/libfbclient.so.3.0.11'
+    Left = 744
+    Top = 248
   end
 end
